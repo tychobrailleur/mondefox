@@ -50,7 +50,7 @@ var MondeFox = {
       var elements = doc.getElementsByClassName(this.IMGS_TO_REDUCE[classes]);
     
       for (var i in elements) {
-        var descendants = []
+        var descendants = [];
         this.getDescendants(doc, elements[i], descendants);
         for (var j in descendants) {
           var current = descendants[j];
@@ -78,7 +78,7 @@ var MondeFox = {
   },
   
   flatten: function(array) {
-    var newArray = []
+    var newArray = [];
     for (var i in array) {
       var element = array[i];
       if (element instanceof Array) {
