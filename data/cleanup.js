@@ -3,25 +3,27 @@ var MondeFox = {
   IDS_TO_REMOVE: [ 'bandeau_bas' ],
   
   // CSS Classes to be removed
-  CLASSES_TO_REMOVE: [ 'plus_partages', 'ombre_section_audience' ],
+  CLASSES_TO_REMOVE: [ 'plus_partages' ],
   
   // Classes containing "img" to be reduced
   IMGS_TO_REDUCE: ['titre_une','img_tt_chapo'],
 
   removeUnwantedStuff: function(doc) {
-      for (var i in this.IDS_TO_REMOVE) {
-        this.removeId(doc, this.IDS_TO_REMOVE[i]);
-      }
-      for (var c in this.CLASSES_TO_REMOVE) {
-        this.removeClass(doc, this.CLASSES_TO_REMOVE[c]);
-      }   
+    for (var i in this.IDS_TO_REMOVE) {
+      this.removeId(doc, this.IDS_TO_REMOVE[i]);
+    }
+    for (var c in this.CLASSES_TO_REMOVE) {
+      this.removeClass(doc, this.CLASSES_TO_REMOVE[c]);
+    }   
   },
 
   // Remove elements with a given class.
   removeClass: function(doc, className) {
     var elements = doc.getElementsByClassName(className);
     for (var el in elements) {
-      elements[el].parentNode.removeChild(elements[el]);
+      if (elements[el].parentNode) {
+        elements[el].parentNode.removeChild(elements[el]);
+      }
     }
   },
     

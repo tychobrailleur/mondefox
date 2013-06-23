@@ -2,8 +2,8 @@
     "name": "mondefox", 
     "license": "GPL 3.0", 
     "author": "Sébastien Le Callonnec", 
-    "version": "0.2", 
+    "version": "0.3", 
     "fullName": "mondefox", 
     "id": "jid1-OOH6V67LvbAGCA", 
-    "description": "customises the layout of lemonde.fr"
+    "description": "Customise the layout of lemonde.fr"
 }
