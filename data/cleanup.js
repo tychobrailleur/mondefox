@@ -1,10 +1,10 @@
 var MondeFox = {
   // ids to be removed.
   IDS_TO_REMOVE: [ 'bandeau_bas' ],
-  
+
   // CSS Classes to be removed
   CLASSES_TO_REMOVE: [ 'plus_partages' ],
-  
+
   // Classes containing "img" to be reduced
   IMGS_TO_REDUCE: ['titre_une','img_tt_chapo'],
 
@@ -14,7 +14,7 @@ var MondeFox = {
     }
     for (var c in this.CLASSES_TO_REMOVE) {
       this.removeClass(doc, this.CLASSES_TO_REMOVE[c]);
-    }   
+    }
   },
 
   // Remove elements with a given class.
@@ -26,7 +26,7 @@ var MondeFox = {
       }
     }
   },
-    
+
   // Remove element with  specific id.
   removeId: function (doc, idElement) {
     var element = doc.getElementById(idElement);
@@ -45,12 +45,12 @@ var MondeFox = {
       });
     }
   },
-  
+
   // Make “chapeau” images a tad smaller
   makeChapeauImagesSmaller: function(doc) {
     for (var classes in this.IMGS_TO_REDUCE) {
       var elements = doc.getElementsByClassName(this.IMGS_TO_REDUCE[classes]);
-    
+
       for (var i in elements) {
         var descendants = [];
         this.getDescendants(doc, elements[i], descendants);
@@ -64,7 +64,7 @@ var MondeFox = {
       }
     }
   },
-  
+
   getDescendants: function(doc, element, descendants) {
     if (element.nodeType === Node.ELEMENT_NODE) {
       descendants.push(element);
@@ -78,7 +78,7 @@ var MondeFox = {
       }
     }
   },
-  
+
   flatten: function(array) {
     var newArray = [];
     for (var i in array) {
@@ -89,14 +89,12 @@ var MondeFox = {
         newArray.push(element);
       }
     }
-    
+
     return newArray;
   }
-}
+};
 
 // That’s where the stuff happens.
 MondeFox.makeChapeauImagesSmaller(document);
 MondeFox.removeUnwantedStuff(document);
 MondeFox.makeLogoClickable(document);
-
-
