@@ -1,3 +1,7 @@
+# 0.6
+
+* Remove unused files.
+
 # 0.5
 
 * Add localisation
