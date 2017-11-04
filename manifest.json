@@ -3,7 +3,8 @@
   "name": "mondefox",
   "version": "0.4",
   "license": "GPLv3",
-  "description": "Customise the layout of lemonde.fr",
+  "default_locale": "fr",
+  "description": "__MSG_extension.description__",
   "homepage_url": "https://github.com/tychobrailleur/mondefox",
   "icons": {
     "64": "icons/social-64.png"
@@ -14,8 +15,8 @@
   ],
   "content_scripts": [
     {
-      "matches": ["*://*.lemonde.fr/*"],
-      "js": ["data/cleanup.js"]
+      "matches": [ "*://*.lemonde.fr/*" ],
+      "js": [ "data/cleanup.js" ]
     }
   ]
 }
