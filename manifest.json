@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "mondefox",
-  "version": "0.4",
+  "version": "0.5",
   "license": "GPLv3",
   "default_locale": "fr",
   "description": "__MSG_extension.description__",

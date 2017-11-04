@@ -1,3 +1,8 @@
+# 0.5
+
+* Add localisation
+* Redirect to https when clicking on the main logo.
+
 # 0.4
 
 * Move to WebExtensions.
