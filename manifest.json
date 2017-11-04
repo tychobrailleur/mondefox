@@ -4,7 +4,7 @@
   "version": "0.5",
   "license": "GPLv3",
   "default_locale": "fr",
-  "description": "__MSG_extension.description__",
+  "description": "__MSG_extensionDescription__",
   "homepage_url": "https://github.com/tychobrailleur/mondefox",
   "icons": {
     "64": "icons/social-64.png"
